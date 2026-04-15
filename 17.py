@@ -1,0 +1,19 @@
+a=open('17_28762.txt')
+
+s=[int(i) for i in a]
+
+mn=10**10
+for i in s:
+    if i%23==0:
+        mn=min(mn,i)
+
+
+k=0
+mxs=-10**10
+for i in range(len(s)-1):
+    a,b=s[i],s[i+1]
+    if a%mn==0 or b%mn==0:
+        k+=1
+        mxs=max(mxs,(a+b))
+
+print(k,mxs)
