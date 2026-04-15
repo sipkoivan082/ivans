@@ -1,0 +1,9 @@
+def f(a,p):
+    if a==p:
+        return 1
+    if a>p or a==7:
+        return 0
+    if a<p:
+        return f(a+1,p)+f(a+3,p) + f(a*2,p)
+
+print(f(2,15)*f(15,25))
